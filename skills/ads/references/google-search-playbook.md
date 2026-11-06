@@ -89,11 +89,21 @@ Once a week per campaign, three passes:
 | Conversions/month (campaign) | Strategy |
 |---|---|
 | 0–15 | Manual CPC or Maximize Conversions (no target) |
-| 15–30 | Maximize Conversions |
-| 30+ stable | Target CPA — set at or slightly above your trailing 30-day actual |
+| 15–40 | Maximize Conversions (no target) |
+| ~40–50+ (10+/week), stable for 4–6 weeks | Target CPA — set at your recent average cost per conversion |
 | Real revenue values flowing back | Target ROAS |
 
-Rules of thumb: smart bidding needs ~30 conversions in 30 days per campaign to learn. Set tCPA near actuals — an aggressively low target chokes delivery (Google just stops bidding). Move targets in **±10–15% steps and wait 1–2 weeks**; every change restarts learning, so don't panic-edit inside the learning window. Budget mechanics: campaigns can spend up to **2× daily budget** in a day (Google balances monthly — single-day overspend is normal); a budget-capped campaign that's converting often *lowers* its CPA when you raise the budget, because constrained smart bidding underperforms.
+**Earn the target.** Don't introduce a tCPA while cost per conversion is still improving week over week. Wait for 4–6 weeks of a flat range. A target tells Google to lock performance in; set too early, it caps gains you'd otherwise get. For many low-volume B2B or local lead-gen campaigns, Maximize Conversions with no target is the permanent answer, and that's fine.
+
+**The August 17, 2026 update (budget-limited targets).** Google changed how Target CPA and Target ROAS behave in campaigns **limited by budget**: Smart Bidding now steers firmly toward the stated target instead of quietly beating it at a capped budget. Unconstrained campaigns, Manual CPC and Maximize Conversions without a target are not affected.
+- **Check "Limited by budget" first.** A target plus a limited budget means the update applies; no limit means it doesn't.
+- **Leave budget headroom** on target-based campaigns. If budgets are fixed, use Maximize Conversions or accept lower spend with a tighter target.
+- **Set targets at recent averages** (Google's guidance), not aspirational numbers. Campaigns that were beating their targets may see CPCs rise as bidding enters pricier auctions.
+- **Don't add bid limits or data exclusions** just in reaction to the update; Google warns they cause fluctuations.
+
+Rules of thumb: smart bidding needs ~30 conversions in 30 days per campaign to learn. An aggressively low target chokes delivery (Google just stops bidding). Move targets in **±10–15% steps** and evaluate after **1–2 conversion cycles** (Google's guidance); for low-volume or long-cycle accounts, treat 3–4 weeks as the minimum. Every change restarts learning, so don't panic-edit inside the learning window. Budget mechanics: campaigns can spend up to **2× daily budget** in a day (Google balances monthly — single-day overspend is normal); a budget-capped campaign that's converting often *lowers* its CPA when you raise the budget, because constrained smart bidding underperforms.
+
+**Low-volume volatility.** Under ~10 conversions a week per campaign, expect weekly swings of 20%+ and occasional zero-conversion weeks even when nothing is wrong. Report to clients monthly and don't react to single weeks.
 
 ## Offline conversions
 
@@ -118,3 +128,5 @@ Weekly scorecard — exactly eight numbers: spend · leads · CPL · lead→SQL 
 ---
 
 *Framework lineage: adapted (re-expressed and restructured) from practitioner playbooks, notably Ivan Falco's ads-skills. Benchmarks are practitioner-reported starting points — recalibrate against your own account.*
+
+*August 2026 bidding notes cross-checked against Google Ads Help, "Frequently asked questions about changes to Target-based bid strategies" (answer 17125145). Low-volume volatility and post-update CPC figures are directional, from a vendor analysis (Define Digital Academy, 502 campaigns, mixed e-commerce and lead gen).*
